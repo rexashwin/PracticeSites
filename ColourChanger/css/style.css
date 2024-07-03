@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div.main {
+    max-width: 500px;
+    margin: 300px auto;
+    text-align: center;
+}
+
+ul.colours {
+    list-style: none;
+    display: flex;
+    margin: auto;
+    width: 300px;
+    /* background-color: #941515; */
+    justify-content: space-between;
+}
+
+ul.colours li {
+    width: 60px;
+    height: 60px;
+    background-color: #65df90;
+    margin: 20px;
+    border-radius: 50%;
+    transition-duration: 300ms;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+ul.colours li:hover {
+    transform: scale(1.5);
+}
+
+#red {
+    background-color: red;
+}
+
+#white {
+    background-color: #fff;
+}
+
+#blue {
+    background-color: blue;
+}
