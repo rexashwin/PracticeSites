@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator - RexAshwin</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1>Find you BMI index</h1>
+      <form>
+        <div class="form-input">
+          <label for="height">Height in CM</label>
+          <input type="text" id="height" />
+        </div>
+        <div class="form-input">
+          <label for="weight">Weight in KG</label>
+          <input type="text" id="weight" />
+        </div>
+        <button type="submit">Calculate</button>
+        <h2 id="result"></h2>
+        <h2 class="marker-box"><i id="marker"></i></h2>
+      </form>
+    </div>
+    <div id="weight-guide">
+      <h3>BMI Weight Guide</h3>
+      <p>Under Weight = Less than 18.5</p>
+      <p>Normal Range = 18.5 to 24.9</p>
+      <p>Overweight = 25 to 29.9</p>
+      <p>Obesity = More than 29.9</p>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
