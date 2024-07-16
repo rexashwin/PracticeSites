@@ -62,10 +62,6 @@ function checkGuess(guess) {
 }
 
 function displayGuess(guess) {
-    //
-}
-
-function displayMessage(message) {
     // clear the user value
     userInput.value = ``;
     // display the last guesses to user
@@ -74,6 +70,10 @@ function displayMessage(message) {
     numGuess++;
     // remaining times to play
     remaining.innerHTML = `${guessLimit - numGuess}`;
+}
+
+function displayMessage(message) {
+    lowOrHi.innerHTML = `<h2>${message}</h2>`;
 }
 
 function endGame() {
