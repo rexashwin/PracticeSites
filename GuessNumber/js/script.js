@@ -10,7 +10,7 @@ let remaining = document.querySelector(".remaining");
 let lowOrHi = document.querySelector(".lowOrHi");
 let startOver = document.querySelector(".resultParas");
 
-let p = document.createElement("p");
+let startButton = document.createElement("button");
 
 let prevGuess = [];
 let numGuess = 1;
@@ -41,7 +41,7 @@ function validateGuess(guess) {
         // last guessed is pushes to array so can be displayed to user
         prevGuess.push(guess);
         // check the limit for game play
-        if (numGuess > guessLimit) {
+        if (numGuess >= guessLimit) {
             displayGuess(guess);
             displayMessage(`Game over! Random number was ${randomNumber}`);
             endGame();
@@ -56,8 +56,14 @@ function validateGuess(guess) {
 // check the user value with random num and end the game
 function checkGuess(guess) {
     if (guess === randomNumber) {
-        displayMessage(`You guessed it Right! \n Random number was ${randomNumber}`);
+        displayMessage(`You guessed it Right! \n The number was ${randomNumber}`);
         endGame();
+    }
+    else if (guess < randomNumber) {
+        displayMessage(`Number is too Low`);
+    }
+    else if (guess > randomNumber) {
+        displayMessage(`Number is too High`);
     }
 }
 
@@ -65,11 +71,11 @@ function displayGuess(guess) {
     // clear the user value
     userInput.value = ``;
     // display the last guesses to user
-    guessSlot.innerHTML += `${guess}`;
-    // num of times guessed
-    numGuess++;
+    guessSlot.innerHTML += `${guess}\t`;
     // remaining times to play
     remaining.innerHTML = `${guessLimit - numGuess}`;
+    // num of times guessed
+    numGuess++;
 }
 
 function displayMessage(message) {
@@ -77,9 +83,25 @@ function displayMessage(message) {
 }
 
 function endGame() {
-    // 
+    userInput.setAttribute('disabled', '');
+    startButton.innerHTML = `<h2 id="newGame">Start new Game</h2>`;
+    startOver.appendChild(startButton);
+    playGame = false;
+    newGame();
 }
 
+// if using button element to start new game. page will itself get refreshed so no need of newGame function 😂
+
 function newGame() {
-    // 
+    startButton.addEventListener('click', function (e) {
+        randomNumber = parseInt(Math.random() * 100 + 1);
+        prevGuess = [];
+        numGuess = 1;
+        guessSlot.innerHTML = '';
+        remaining.innerHTML = `${guessLimit - numGuess} `;
+        userInput.removeAttribute('disabled');
+        startOver.removeChild(button);
+
+        playGame = true;
+    });
 }
