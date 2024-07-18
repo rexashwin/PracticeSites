@@ -1,6 +1,7 @@
 // generating random number between (0,100]
 // let randomNumber = Math.floor(Math.random() * 100) + 1;
 let randomNumber = parseInt(Math.random() * 100 + 1);
+console.log(randomNumber);
 
 
 let submit = document.getElementById("submit");
@@ -40,30 +41,28 @@ function validateGuess(guess) {
     else {
         // last guessed is pushes to array so can be displayed to user
         prevGuess.push(guess);
-        // check the limit for game play
-        if (numGuess >= guessLimit) {
-            displayGuess(guess);
-            displayMessage(`Game over! Random number was ${randomNumber}`);
-            endGame();
-        }
-        else {
-            displayGuess(guess);
-            checkGuess(guess);
-        }
+        // check the guess before counting attempts
+        checkGuess(guess);
     }
 }
 
 // check the user value with random num and end the game
 function checkGuess(guess) {
     if (guess === randomNumber) {
-        displayMessage(`You guessed it Right! \n The number was ${randomNumber}`);
+        displayGuess(guess);
+        displayMessage(`You guessed it Right! The number was ${randomNumber}`);
         endGame();
     }
-    else if (guess < randomNumber) {
-        displayMessage(`Number is too Low`);
-    }
-    else if (guess > randomNumber) {
-        displayMessage(`Number is too High`);
+    else {
+        displayGuess(guess);
+        if (numGuess > guessLimit) {
+            displayMessage(`Game Over! The Number was ${randomNumber}`);
+            endGame();
+        } else if (guess < randomNumber) {
+            displayMessage(`Number is too Low`);
+        } else if (guess > randomNumber) {
+            displayMessage(`Number is too High`);
+        }
     }
 }
 
@@ -84,6 +83,7 @@ function displayMessage(message) {
 
 function endGame() {
     userInput.setAttribute('disabled', '');
+    submit.setAttribute('disabled', '');
     startButton.innerHTML = `<h2 id="newGame">Start new Game</h2>`;
     startOver.appendChild(startButton);
     playGame = false;
@@ -94,12 +94,14 @@ function endGame() {
 
 function newGame() {
     startButton.addEventListener('click', function (e) {
+        e.preventDefault;
         randomNumber = parseInt(Math.random() * 100 + 1);
         prevGuess = [];
         numGuess = 1;
         guessSlot.innerHTML = '';
         remaining.innerHTML = `${guessLimit - numGuess} `;
         userInput.removeAttribute('disabled');
+        submit.removeAttribute('disabled');
         startOver.removeChild(button);
 
         playGame = true;
