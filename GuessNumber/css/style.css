@@ -64,6 +64,12 @@ input[type="submit"] {
     margin-top: 10px;
 }
 
+input[type="submit"]:disabled {
+    cursor: not-allowed; /* Change cursor to indicate disabled state */
+    opacity: 0.6;
+}
+
+
 .resultParas {
     margin-top: 20px;
 }
