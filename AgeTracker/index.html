@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Tracker</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Age Tracker</h1>
+    <h3>By entering your date of birth and expected age, the Age Tracker website provides a table showing days left until your expected age and updates daily to show days spent and remaining.</h3>
+    <form id="ageForm">
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required />
+      <br /><br />
+      <label for="ageExpected">Expected Age:</label>
+      <input type="number" id="ageExpected" name="ageExpected" required />
+      <br /><br />
+      <button type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+    <div id="grid"></div>
+    <div id="guide"></div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
