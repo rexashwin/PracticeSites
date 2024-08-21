@@ -6,3 +6,13 @@ function randomColor() {
     }
     console.log(color);
 }
+
+function startChangingColor() {
+    setInterval(changeBgColor(), 1000);
+
+    function changeBgColor() {
+        document.body.style.backgroundColor = randomColor();
+    }
+}
+
+document.querySelector("#start").addEventListener('click', startChangingColor);
