@@ -18,6 +18,7 @@ function startChangingColor() {
 
 function stopChangingColor() {
     clearInterval(intervalId);
+    intervalId = null;
 }
 
 document.querySelector("#start").addEventListener('click', startChangingColor);
