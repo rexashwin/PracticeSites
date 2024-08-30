@@ -16,15 +16,20 @@ function startChangingColor() {
         intervalId = setInterval(changeBgColor, 1000);  // Call changeBgColor every 1000 milliseconds (1 second)
     }
 
+    // Function to change the background color of the webpage
     function changeBgColor() {
-        document.body.style.backgroundColor = randomColor();
+        document.body.style.backgroundColor = randomColor();  // Set the background color to a randomly generated hex color
     }
 }
 
+// Function to stop changing the background color
 function stopChangingColor() {
-    clearInterval(intervalId);
-    intervalId = null;
+    clearInterval(intervalId);  // Stop the interval using its ID
+    intervalId = null;  // Reset the interval ID to null so we can start again later if needed
 }
 
+// Event listener for the "Start" button, triggering the color change
 document.querySelector("#start").addEventListener('click', startChangingColor);
+
+// Event listener for the "Stop" button, stopping the color change
 document.querySelector("#stop").addEventListener('click', stopChangingColor);
