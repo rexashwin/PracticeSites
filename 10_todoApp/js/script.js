@@ -18,7 +18,7 @@ function displayItems() {
         newHtml += `
             <div>
             <span>${todoItem}</span>
-            <button>Delete</button>
+            <button onclick="todoList.splice(${i},1); displayItems();">Delete</button>
             </div>
         `
     }
