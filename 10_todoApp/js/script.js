@@ -5,7 +5,10 @@ displayItems();
 function addTodo() {
     let todoInputElement = document.querySelector(`#todo-input`);
     let todoInputValue = todoInputElement.value;
+    let dueDateElement = document.querySelector(`#todo-date`);
+    let dueDateValue = dueDateElement.value;
     console.log(todoInputValue);
+    console.log(dueDateValue);
     todoList.push(todoInputValue);
     displayItems();
 }
