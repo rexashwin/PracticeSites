@@ -9,4 +9,8 @@ header h1.title{
 main{
     width: 60%;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 49% 29% 20%;
+    gap: 10px;
+    border: 1px solid black;
 }
