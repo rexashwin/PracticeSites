@@ -1,4 +1,9 @@
-let todoList = [`buy milk`]
+let todoList = [
+    {
+        item: `buy milk`,
+        dueDate: `2024-12-04`,
+    }
+]
 displayItems();
 
 
@@ -9,7 +14,7 @@ function addTodo() {
     let dueDateValue = dueDateElement.value;
     console.log(todoInputValue);
     console.log(dueDateValue);
-    todoList.push(todoInputValue);
+    todoList.push({ item: todoInputValue, dueDate: dueDateValue });
     displayItems();
 }
 
