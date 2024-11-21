@@ -15,6 +15,7 @@ function addTodo() {
     console.log(todoInputValue);
     console.log(dueDateValue);
     todoList.push({ item: todoInputValue, dueDate: dueDateValue });
+    todoInputElement.value = ' ';
     displayItems();
 }
 
