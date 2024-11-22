@@ -24,9 +24,11 @@ function displayItems() {
     newHtml = ` `;
     for (let i = 0; i < todoList.length; i++) {
         let todoItem = todoList[i].item;
+        let todoDate = todoList[i].dueDate;
         newHtml += `
             <div>
             <span>${todoItem}</span>
+            <span>${todoDate}</span>
             <button onclick="todoList.splice(${i},1); displayItems();">Delete</button>
             </div>
         `
