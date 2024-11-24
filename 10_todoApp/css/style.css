@@ -13,7 +13,14 @@ main{
 
 .grid-container{
     display: grid;
-    grid-template-columns: 30rem 15rem 15rem;
-    gap: 1.2rem;
+    grid-template-columns: 33rem 13.6rem 13.8rem;
+    gap: 1rem;
+    align-items: center;
     border: 1px solid black;
+}
+
+#todo-input, #todo-date{
+    font-size: 1.125rem;
+    padding: 15px 10px;
+    color: rgb(118, 118, 118);
 }
