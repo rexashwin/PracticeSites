@@ -28,7 +28,7 @@ function displayItems() {
         newHtml += `
             <span>${todoItem}</span>
             <span>${todoDate}</span>
-            <button onclick="todoList.splice(${i},1); displayItems();">Delete</button>
+            <button class="btn-delete" onclick="todoList.splice(${i},1); displayItems();">Delete</button>
         `
     }
     todoContainer.innerHTML = newHtml;

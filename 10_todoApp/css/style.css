@@ -19,13 +19,13 @@ main{
     border: 1px solid black;
 }
 
-#todo-input, #todo-date{
+#todo-input, #todo-date, .grid-container span{
     font-size: 1.125rem;
     padding: 1rem 0.6rem;
     color: rgb(118, 118, 118);
 }
 
-.btn-add{
+.btn-add, .btn-delete{
     font-size: 1.125rem;
     padding: 1.2rem;
     background-color: #73cb00;
@@ -33,4 +33,8 @@ main{
     border-radius: 0.4rem;
     color: #fff;
     cursor: pointer;
+}
+
+.btn-delete{
+    background-color: rgb(120, 4, 4);
 }
