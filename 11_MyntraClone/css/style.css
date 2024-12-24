@@ -114,6 +114,8 @@ footer{
 #footer{
     width: 65%;
     margin: 0 auto;
+}
+.footer-container{
     display: flex;
     justify-content: space-between;
 }
@@ -136,6 +138,11 @@ footer{
     text-decoration: none;
     padding-bottom: 10px;
     font-weight: 300;
+}
+
+/* remove padding bottom from last link */
+a.footer-shoplinks-links:last-of-type{
+    padding-bottom: 0;
 }
 
 .footer-appExperience{
@@ -178,4 +185,27 @@ footer{
 .footer-original p strong{
     color: #282c3f;
     font-size: 15px;
+}
+
+.footer-divider{
+    border: 1px solid #eaeaec;
+    margin: 50px 0;
+}
+.footer-divider:last-of-type{
+    margin: 50px 0 20px;
+}
+
+/* footer info section */
+.footer-info {
+    color: #696b79;
+    font-size: 14px;
+    font-weight: 300;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.footer-copyright{
+    text-align: center;
+}
+.footer-flipkart{
+    text-align: right;
 }
