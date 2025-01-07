@@ -93,6 +93,7 @@ header {
     flex-direction: column;
     align-items: center;
     margin: 0 10px;
+    cursor: pointer;
 }
 
 .action-icon {
@@ -104,6 +105,21 @@ header {
     font-size: 12px;
     font-weight: 700;
     margin: 5px 0;
+}
+
+.bag-item-count{
+    background-color: #f16565;
+    border-radius: 50%;
+    padding: 0px 6px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    left: 13px;
+    bottom: 49px;
 }
 
 /* FOOTER Section */
@@ -228,10 +244,14 @@ a.footer-shoplinks-links:last-of-type {
 .items-container {
     width: 80%;
     margin: 40px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .item-container {
     width: 250px;
+    margin: 0 0 20px;
 }
 
 .item-image {
@@ -305,4 +325,5 @@ a.footer-shoplinks-links:last-of-type {
     border: none;
     padding: 5px 15px;
     border-radius: 10px;
+    cursor: pointer;
 }

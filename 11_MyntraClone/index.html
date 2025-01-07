@@ -4,6 +4,7 @@
 <head>
     <meta name="author" content="RexAshwin">
     <meta name="description" content="Myntra Clone Practice">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myntra Clone</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- google icon reference -->
@@ -41,27 +42,13 @@
                 <div class="action-container">
                     <span class="material-symbols-outlined action-icon">shopping_bag</span>
                     <span class="action-name">Bag</span>
+                    <span class="bag-item-count">0</span>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <div class="items-container">
-            <div class="item-container">
-                <img class="item-image" src="images/offers/1.png" alt="item pic">
-                <div class="rating">
-                    4.5 ⭐ | 1.4k
-                </div>
-                <div class="company-name">Carlton London</div>
-                <div class="item-name">Rhodium-Plated CZ Floral Studs</div>
-                <div class="price">
-                    <span class="current-price">Rs 606</span>
-                    <span class="original-price">Rs 1045</span>
-                    <span class="discount">(42% OFF) </span>
-                </div>
-                <button class="btn-add-bag">Add to Bag</button>
-            </div>
-        </div>
+        <div class="items-container"></div>
     </main>
     <footer>
         <div id="footer">
@@ -139,6 +126,8 @@
             <hr class="footer-divider">
         </div>
     </footer>
+    <script src="data/items.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
