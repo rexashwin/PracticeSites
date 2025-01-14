@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta name="author" content="RexAshwin">
-    <meta name="description" content="Myntra Clone Practice">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myntra Clone</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- google icon reference -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bag.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-
 <body>
     <header>
         <div class="header">
             <div class="logo-container">
-                <a href="#"><img class="myntra-logo" src="images/myntra_logo.webp" alt="Myntra Logo"></a>
+                <a href="#"><img class="myntra-logo" src="../images/myntra_logo.webp" alt="Myntra Logo"></a>
             </div>
             <div class="nav-bar">
                 <a href="#">MEN</a>
@@ -39,7 +33,7 @@
                     <span class="material-symbols-outlined action-icon">favorite</span>
                     <span class="action-name">Wishlist</span>
                 </div>
-                <a class="action-container" href="pages/bag.html">
+                <a class="action-container" href="#">
                     <span class="material-symbols-outlined action-icon">shopping_bag</span>
                     <span class="action-name">Bag</span>
                     <span class="bag-item-count">0</span>
@@ -48,7 +42,60 @@
         </div>
     </header>
     <main>
-        <div class="items-container"></div>
+      <div class="bag-page">
+        <div class="bag-items-container">
+          <div class="bag-item-container">
+            <div class="item-left-part">
+              <img class="bag-item-img" src="../images/items/4.jpg">
+            </div>
+            <div class="item-right-part">
+              <div class="company">ADIDAS</div>
+              <div class="item-name">Men Printed Polo Collar Indian Cricket ODI Jersey</div>
+              <div class="price-container">
+                <span class="current-price">Rs 999</span>
+                <span class="original-price">Rs 999</span>
+                <span class="discount-percentage">(0% OFF)</span>
+              </div>
+              <div class="return-period">
+                <span class="return-period-days">14 days</span> return available
+              </div>
+              <div class="delivery-details">
+                Delivery by
+                <span class="delivery-details-days">10 Oct 2023</span>
+              </div>
+            </div>
+
+            <div class="remove-from-cart">X</div>
+          </div>
+
+        </div>
+        <div class="bag-summary">
+          <div class="bag-details-container">
+            <div class="price-header">PRICE DETAILS (2 Items) </div>
+            <div class="price-item">
+              <span class="price-item-tag">Total MRP</span>
+              <span class="price-item-value">Rs1284</span>
+            </div>
+            <div class="price-item">
+              <span class="price-item-tag">Discount on MRP</span>
+              <span class="price-item-value priceDetail-base-discount">-Rs143</span>
+            </div>
+            <div class="price-item">
+              <span class="price-item-tag">Convenience Fee</span>
+              <span class="price-item-value">Rs 99</span>
+            </div>
+            <hr>
+            <div class="price-footer">
+              <span class="price-item-tag">Total Amount</span>
+              <span class="price-item-value">Rs 1240</span>
+            </div>
+          </div>
+          <button class="btn-place-order">
+            <div class="css-xjhrni">PLACE ORDER</div>
+          </button>
+        </div>
+
+      </div>
     </main>
     <footer>
         <div id="footer">
@@ -91,27 +138,27 @@
                     <a href="#" class="footer-shoplinks-title">EXPERIENCE MYNTRA APP ON MOBILE</a>
                     <div class="app-download-container">
                         <a href="https://play.google.com/store/apps/details?id=com.myntra.android"><img
-                                src="./images/icon-google-play.png" alt="google play icon" class="googleplay"></a>
+                                src="../images/icon-google-play.png" alt="google play icon" class="googleplay"></a>
                         <a href="https://itunes.apple.com/in/app/myntra-indias-fashion-store/id907394059"><img
-                                src="./images/icon-apple-itunes.png" alt="apple itunes icon" class="appleitunes"></a>
+                                src="../images/icon-apple-itunes.png" alt="apple itunes icon" class="appleitunes"></a>
                     </div>
                     <a href="#" class="footer-shoplinks-title footer-social-title">KEEP IN TOUCH</a>
-                    <a href="https://www.facebook.com/myntra" class="footer-social-icon"><img src="images/icon-fb.png"
+                    <a href="https://www.facebook.com/myntra" class="footer-social-icon"><img src="../images/icon-fb.png"
                             alt=""></a>
                     <a href="https://www.twitter.com/myntra" class="footer-social-icon"><img
-                            src="images/icon-twitter.png" alt=""></a>
+                            src="../images/icon-twitter.png" alt=""></a>
                     <a href="https://www.youtube.com/user/myntradotcom" class="footer-social-icon"><img
-                            src="images/icon-youtube.png" alt=""></a>
+                            src="../images/icon-youtube.png" alt=""></a>
                     <a href="https://www.instagram.com/myntra" class="footer-social-icon"><img
-                            src="images/icon-insta.png" alt=""></a>
+                            src="../images/icon-insta.png" alt=""></a>
                 </div>
                 <div class="footer-promises">
                     <div class="footer-original">
-                        <img src="images/icon-original.png" alt="original icon">
+                        <img src="../images/icon-original.png" alt="original icon">
                         <p><strong>100% Original</strong> guarantee for all products at myntra.com</p>
                     </div>
                     <div class="footer-original">
-                        <img src="images/icon-return-14days.png" alt="return icon">
+                        <img src="../images/icon-return-14days.png" alt="return icon">
                         <p><strong>Return within 14days</strong> of receiving your order</p>
                     </div>
                 </div>
@@ -126,8 +173,5 @@
             <hr class="footer-divider">
         </div>
     </footer>
-    <script src="data/items.js"></script>
-    <script src="js/script.js"></script>
 </body>
-
 </html>
