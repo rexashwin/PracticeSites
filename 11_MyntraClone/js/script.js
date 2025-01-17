@@ -26,6 +26,9 @@ function displayBagIcon() {
 
 function displayItemsOnHomePage() {
     let itemsContainerElement = document.querySelector(`.items-container`);
+    if(!itemsContainerElement){
+        return;
+    }
     let innerHTML = ``;
     // use const 'items' var from items.js 
     items.forEach(items => {
