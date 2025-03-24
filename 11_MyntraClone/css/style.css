@@ -127,7 +127,8 @@ header {
 
 /* FOOTER Section */
 footer {
-    padding: 30px 0px 40px 0px;
+    padding: 30px 0 40px 0;
+    margin: 30px 0 0 0;
     background: #FAFBFC;
 }
 
